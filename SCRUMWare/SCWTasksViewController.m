@@ -164,14 +164,14 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 - (UIColor *)colorForStatus:(SCWStatusType)status {
     switch (status) {
         case SCWStatusTypeTodo:
-            return [UIColor yellowColor];
+            return [UIColor lightGrayColor];
         case SCWStatusTypeInProcess:
-            return [UIColor greenColor];
+            return [UIColor darkGrayColor];
         case SCWStatusTypeToVerify:
         case SCWStatusTypeDone:
-            return [UIColor lightGrayColor];
+        default:
+            return [UIColor clearColor];
     }
-    return [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning

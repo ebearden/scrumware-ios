@@ -76,15 +76,21 @@ NSString *const SCWTableViewCellIdentifier = @"MainMenuCell";
     return SCWTableViewCellCount;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SCWTableViewCellIdentifier];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SCWTableViewCellIdentifier];
     
     switch (indexPath.row) {
         case SCWMainMenuOptionTasks:
             cell.textLabel.text = @"Tasks";
+            cell.detailTextLabel.text = @"View your current task assignments.";
             break;
         case SCWMainMenuOptionStories:
             cell.textLabel.text = @"Stories";
+            cell.detailTextLabel.text = @"View your current stories.";
             break;
         case SCWMainMenuOptionLogout:
             cell.textLabel.text = @"Logout";
