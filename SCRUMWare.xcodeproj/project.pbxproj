@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A0F5DFB193B8DFB00D9E7EF /* SCWUserLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F5DFA193B8DFB00D9E7EF /* SCWUserLoginTests.m */; };
+		4A1B609D1930122400B5A653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B609C1930122400B5A653 /* Foundation.framework */; };
+		4A1B609F1930122400B5A653 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B609E1930122400B5A653 /* CoreGraphics.framework */; };
+		4A1B60A11930122400B5A653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B60A01930122400B5A653 /* UIKit.framework */; };
+		4A1B60A31930122400B5A653 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B60A21930122400B5A653 /* CoreData.framework */; };
+		4A1B60A91930122400B5A653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B60A71930122400B5A653 /* InfoPlist.strings */; };
+		4A1B60AB1930122400B5A653 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60AA1930122400B5A653 /* main.m */; };
+		4A1B60AF1930122400B5A653 /* SCWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60AE1930122400B5A653 /* SCWAppDelegate.m */; };
+		4A1B60B21930122400B5A653 /* SCRUMWare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60B01930122400B5A653 /* SCRUMWare.xcdatamodeld */; };
+		4A1B60B41930122400B5A653 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B60B31930122400B5A653 /* Images.xcassets */; };
+		4A1B60BB1930122500B5A653 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B60BA1930122500B5A653 /* XCTest.framework */; };
+		4A1B60BC1930122500B5A653 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B609C1930122400B5A653 /* Foundation.framework */; };
+		4A1B60BD1930122500B5A653 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B60A01930122400B5A653 /* UIKit.framework */; };
+		4A1B60BE1930122500B5A653 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B60A21930122400B5A653 /* CoreData.framework */; };
+		4A1B60C61930122500B5A653 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B60C41930122500B5A653 /* InfoPlist.strings */; };
+		4A1B60C81930122500B5A653 /* SCRUMWareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60C71930122500B5A653 /* SCRUMWareTests.m */; };
+		4A1B60D7193012A100B5A653 /* SCWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60D5193012A100B5A653 /* SCWLoginViewController.m */; };
+		4A1B60D8193012A100B5A653 /* SCWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B60D6193012A100B5A653 /* SCWLoginViewController.xib */; };
+		4A1B60DB193012CA00B5A653 /* SCWUserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60DA193012CA00B5A653 /* SCWUserLogin.m */; };
+		4A375FEC19636BB70087EFEB /* SCWStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A375FEB19636BB70087EFEB /* SCWStatus.m */; };
+		4A82A549193D56D4005DF7C7 /* SCWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A82A548193D56D4005DF7C7 /* SCWUser.m */; };
+		4A9FC00A196258F800F9FA3C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFF8196258F800F9FA3C /* AFHTTPRequestOperation.m */; };
+		4A9FC00B196258F800F9FA3C /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFFA196258F800F9FA3C /* AFHTTPRequestOperationManager.m */; };
+		4A9FC00C196258F800F9FA3C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFFC196258F800F9FA3C /* AFHTTPSessionManager.m */; };
+		4A9FC00D196258F800F9FA3C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFFF196258F800F9FA3C /* AFNetworkReachabilityManager.m */; };
+		4A9FC00E196258F800F9FA3C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC001196258F800F9FA3C /* AFSecurityPolicy.m */; };
+		4A9FC00F196258F800F9FA3C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC003196258F800F9FA3C /* AFURLConnectionOperation.m */; };
+		4A9FC010196258F800F9FA3C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC005196258F800F9FA3C /* AFURLRequestSerialization.m */; };
+		4A9FC011196258F800F9FA3C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC007196258F800F9FA3C /* AFURLResponseSerialization.m */; };
+		4A9FC012196258F800F9FA3C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC009196258F800F9FA3C /* AFURLSessionManager.m */; };
+		4A9FC0151962598A00F9FA3C /* SCWTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC0141962598A00F9FA3C /* SCWTasksViewController.m */; };
+		4A9FC0181962681800F9FA3C /* SCWTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC0171962681800F9FA3C /* SCWTask.m */; };
+		4A9FC01C196271F300F9FA3C /* SCWTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC01A196271F300F9FA3C /* SCWTaskTableViewCell.m */; };
+		4A9FC01D196271F300F9FA3C /* SCWTaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */; };
+		4AE1C935193BBA92000CB45C /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C92E193BBA92000CB45C /* RNCryptor.m */; };
+		4AE1C936193BBA92000CB45C /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */; };
+		4AE1C937193BBA92000CB45C /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C932193BBA92000CB45C /* RNDecryptor.m */; };
+		4AE1C938193BBA92000CB45C /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C934193BBA92000CB45C /* RNEncryptor.m */; };
+		4AE1C93A193BBAA6000CB45C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE1C939193BBAA6000CB45C /* Security.framework */; };
+		4AE1C93E193BF879000CB45C /* SCWMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */; };
+		4AE1C93F193BF879000CB45C /* SCWMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1C93D193BF879000CB45C /* SCWMainMenuViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A1B60BF1930122500B5A653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A1B60911930122400B5A653 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A1B60981930122400B5A653;
+			remoteInfo = SCRUMWare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A0F5DFA193B8DFB00D9E7EF /* SCWUserLoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWUserLoginTests.m; sourceTree = "<group>"; };
+		4A1B60991930122400B5A653 /* SCRUMWare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCRUMWare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1B609C1930122400B5A653 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4A1B609E1930122400B5A653 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4A1B60A01930122400B5A653 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4A1B60A21930122400B5A653 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4A1B60A61930122400B5A653 /* SCRUMWare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCRUMWare-Info.plist"; sourceTree = "<group>"; };
+		4A1B60A81930122400B5A653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A1B60AA1930122400B5A653 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A1B60AC1930122400B5A653 /* SCRUMWare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCRUMWare-Prefix.pch"; sourceTree = "<group>"; };
+		4A1B60AD1930122400B5A653 /* SCWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCWAppDelegate.h; sourceTree = "<group>"; };
+		4A1B60AE1930122400B5A653 /* SCWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCWAppDelegate.m; sourceTree = "<group>"; };
+		4A1B60B11930122400B5A653 /* SCRUMWare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SCRUMWare.xcdatamodel; sourceTree = "<group>"; };
+		4A1B60B31930122400B5A653 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A1B60B91930122500B5A653 /* SCRUMWareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCRUMWareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1B60BA1930122500B5A653 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4A1B60C31930122500B5A653 /* SCRUMWareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCRUMWareTests-Info.plist"; sourceTree = "<group>"; };
+		4A1B60C51930122500B5A653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A1B60C71930122500B5A653 /* SCRUMWareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRUMWareTests.m; sourceTree = "<group>"; };
+		4A1B60D4193012A100B5A653 /* SCWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWLoginViewController.h; sourceTree = "<group>"; };
+		4A1B60D5193012A100B5A653 /* SCWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWLoginViewController.m; sourceTree = "<group>"; };
+		4A1B60D6193012A100B5A653 /* SCWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCWLoginViewController.xib; sourceTree = "<group>"; };
+		4A1B60D9193012CA00B5A653 /* SCWUserLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWUserLogin.h; sourceTree = "<group>"; };
+		4A1B60DA193012CA00B5A653 /* SCWUserLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWUserLogin.m; sourceTree = "<group>"; };
+		4A375FEA19636BB70087EFEB /* SCWStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWStatus.h; sourceTree = "<group>"; };
+		4A375FEB19636BB70087EFEB /* SCWStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWStatus.m; sourceTree = "<group>"; };
+		4A82A547193D56D4005DF7C7 /* SCWUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWUser.h; sourceTree = "<group>"; };
+		4A82A548193D56D4005DF7C7 /* SCWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWUser.m; sourceTree = "<group>"; };
+		4A9FBFF7196258F800F9FA3C /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		4A9FBFF8196258F800F9FA3C /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		4A9FBFF9196258F800F9FA3C /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		4A9FBFFA196258F800F9FA3C /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		4A9FBFFB196258F800F9FA3C /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		4A9FBFFC196258F800F9FA3C /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		4A9FBFFD196258F800F9FA3C /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		4A9FBFFE196258F800F9FA3C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		4A9FBFFF196258F800F9FA3C /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		4A9FC000196258F800F9FA3C /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		4A9FC001196258F800F9FA3C /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		4A9FC002196258F800F9FA3C /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		4A9FC003196258F800F9FA3C /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		4A9FC004196258F800F9FA3C /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		4A9FC005196258F800F9FA3C /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		4A9FC006196258F800F9FA3C /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		4A9FC007196258F800F9FA3C /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		4A9FC008196258F800F9FA3C /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		4A9FC009196258F800F9FA3C /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		4A9FC0131962598A00F9FA3C /* SCWTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWTasksViewController.h; sourceTree = "<group>"; };
+		4A9FC0141962598A00F9FA3C /* SCWTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWTasksViewController.m; sourceTree = "<group>"; };
+		4A9FC0161962681800F9FA3C /* SCWTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWTask.h; sourceTree = "<group>"; };
+		4A9FC0171962681800F9FA3C /* SCWTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWTask.m; sourceTree = "<group>"; };
+		4A9FC019196271F300F9FA3C /* SCWTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWTaskTableViewCell.h; sourceTree = "<group>"; };
+		4A9FC01A196271F300F9FA3C /* SCWTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWTaskTableViewCell.m; sourceTree = "<group>"; };
+		4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCWTaskTableViewCell.xib; sourceTree = "<group>"; };
+		4AE1C92B193BBA92000CB45C /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
+		4AE1C92C193BBA92000CB45C /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		4AE1C92D193BBA92000CB45C /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		4AE1C92E193BBA92000CB45C /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
+		4AE1C92F193BBA92000CB45C /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
+		4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
+		4AE1C931193BBA92000CB45C /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
+		4AE1C932193BBA92000CB45C /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
+		4AE1C933193BBA92000CB45C /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
+		4AE1C934193BBA92000CB45C /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
+		4AE1C939193BBAA6000CB45C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4AE1C93B193BF879000CB45C /* SCWMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWMainMenuViewController.h; sourceTree = "<group>"; };
+		4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWMainMenuViewController.m; sourceTree = "<group>"; };
+		4AE1C93D193BF879000CB45C /* SCWMainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCWMainMenuViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A1B60961930122400B5A653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE1C93A193BBAA6000CB45C /* Security.framework in Frameworks */,
+				4A1B609F1930122400B5A653 /* CoreGraphics.framework in Frameworks */,
+				4A1B60A31930122400B5A653 /* CoreData.framework in Frameworks */,
+				4A1B60A11930122400B5A653 /* UIKit.framework in Frameworks */,
+				4A1B609D1930122400B5A653 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A1B60B61930122500B5A653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1B60BB1930122500B5A653 /* XCTest.framework in Frameworks */,
+				4A1B60BE1930122500B5A653 /* CoreData.framework in Frameworks */,
+				4A1B60BD1930122500B5A653 /* UIKit.framework in Frameworks */,
+				4A1B60BC1930122500B5A653 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A1B60901930122400B5A653 = {
+			isa = PBXGroup;
+			children = (
+				4A1B60A41930122400B5A653 /* SCRUMWare */,
+				4A1B60C11930122500B5A653 /* SCRUMWareTests */,
+				4A1B609B1930122400B5A653 /* Frameworks */,
+				4A1B609A1930122400B5A653 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A1B609A1930122400B5A653 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60991930122400B5A653 /* SCRUMWare.app */,
+				4A1B60B91930122500B5A653 /* SCRUMWareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A1B609B1930122400B5A653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AE1C939193BBAA6000CB45C /* Security.framework */,
+				4A1B609C1930122400B5A653 /* Foundation.framework */,
+				4A1B609E1930122400B5A653 /* CoreGraphics.framework */,
+				4A1B60A01930122400B5A653 /* UIKit.framework */,
+				4A1B60A21930122400B5A653 /* CoreData.framework */,
+				4A1B60BA1930122500B5A653 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A1B60A41930122400B5A653 /* SCRUMWare */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60D31930125B00B5A653 /* Model */,
+				4A1B60D21930125400B5A653 /* View */,
+				4A1B60D11930124A00B5A653 /* Controller */,
+				4A1B60AD1930122400B5A653 /* SCWAppDelegate.h */,
+				4A1B60AE1930122400B5A653 /* SCWAppDelegate.m */,
+				4AE1C929193BBA7D000CB45C /* Libraries */,
+				4A1B60B31930122400B5A653 /* Images.xcassets */,
+				4A1B60B01930122400B5A653 /* SCRUMWare.xcdatamodeld */,
+				4A1B60A51930122400B5A653 /* Supporting Files */,
+			);
+			path = SCRUMWare;
+			sourceTree = "<group>";
+		};
+		4A1B60A51930122400B5A653 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60A61930122400B5A653 /* SCRUMWare-Info.plist */,
+				4A1B60A71930122400B5A653 /* InfoPlist.strings */,
+				4A1B60AA1930122400B5A653 /* main.m */,
+				4A1B60AC1930122400B5A653 /* SCRUMWare-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A1B60C11930122500B5A653 /* SCRUMWareTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60C71930122500B5A653 /* SCRUMWareTests.m */,
+				4A1B60C21930122500B5A653 /* Supporting Files */,
+				4A0F5DFA193B8DFB00D9E7EF /* SCWUserLoginTests.m */,
+			);
+			path = SCRUMWareTests;
+			sourceTree = "<group>";
+		};
+		4A1B60C21930122500B5A653 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60C31930122500B5A653 /* SCRUMWareTests-Info.plist */,
+				4A1B60C41930122500B5A653 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A1B60D11930124A00B5A653 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60D4193012A100B5A653 /* SCWLoginViewController.h */,
+				4A1B60D5193012A100B5A653 /* SCWLoginViewController.m */,
+				4AE1C93B193BF879000CB45C /* SCWMainMenuViewController.h */,
+				4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */,
+				4A9FC0131962598A00F9FA3C /* SCWTasksViewController.h */,
+				4A9FC0141962598A00F9FA3C /* SCWTasksViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4A1B60D21930125400B5A653 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A9FC01E1962722400F9FA3C /* Nibs */,
+				4A9FC019196271F300F9FA3C /* SCWTaskTableViewCell.h */,
+				4A9FC01A196271F300F9FA3C /* SCWTaskTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4A1B60D31930125B00B5A653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60D9193012CA00B5A653 /* SCWUserLogin.h */,
+				4A1B60DA193012CA00B5A653 /* SCWUserLogin.m */,
+				4A82A547193D56D4005DF7C7 /* SCWUser.h */,
+				4A82A548193D56D4005DF7C7 /* SCWUser.m */,
+				4A9FC0161962681800F9FA3C /* SCWTask.h */,
+				4A9FC0171962681800F9FA3C /* SCWTask.m */,
+				4A375FEA19636BB70087EFEB /* SCWStatus.h */,
+				4A375FEB19636BB70087EFEB /* SCWStatus.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4A9FBFF6196258F800F9FA3C /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4A9FBFF7196258F800F9FA3C /* AFHTTPRequestOperation.h */,
+				4A9FBFF8196258F800F9FA3C /* AFHTTPRequestOperation.m */,
+				4A9FBFF9196258F800F9FA3C /* AFHTTPRequestOperationManager.h */,
+				4A9FBFFA196258F800F9FA3C /* AFHTTPRequestOperationManager.m */,
+				4A9FBFFB196258F800F9FA3C /* AFHTTPSessionManager.h */,
+				4A9FBFFC196258F800F9FA3C /* AFHTTPSessionManager.m */,
+				4A9FBFFD196258F800F9FA3C /* AFNetworking.h */,
+				4A9FBFFE196258F800F9FA3C /* AFNetworkReachabilityManager.h */,
+				4A9FBFFF196258F800F9FA3C /* AFNetworkReachabilityManager.m */,
+				4A9FC000196258F800F9FA3C /* AFSecurityPolicy.h */,
+				4A9FC001196258F800F9FA3C /* AFSecurityPolicy.m */,
+				4A9FC002196258F800F9FA3C /* AFURLConnectionOperation.h */,
+				4A9FC003196258F800F9FA3C /* AFURLConnectionOperation.m */,
+				4A9FC004196258F800F9FA3C /* AFURLRequestSerialization.h */,
+				4A9FC005196258F800F9FA3C /* AFURLRequestSerialization.m */,
+				4A9FC006196258F800F9FA3C /* AFURLResponseSerialization.h */,
+				4A9FC007196258F800F9FA3C /* AFURLResponseSerialization.m */,
+				4A9FC008196258F800F9FA3C /* AFURLSessionManager.h */,
+				4A9FC009196258F800F9FA3C /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		4A9FC01E1962722400F9FA3C /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B60D6193012A100B5A653 /* SCWLoginViewController.xib */,
+				4AE1C93D193BF879000CB45C /* SCWMainMenuViewController.xib */,
+				4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		4AE1C929193BBA7D000CB45C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4A9FBFF6196258F800F9FA3C /* AFNetworking */,
+				4AE1C92A193BBA92000CB45C /* RNCryptor */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		4AE1C92A193BBA92000CB45C /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				4AE1C92B193BBA92000CB45C /* RNCryptor+Private.h */,
+				4AE1C92C193BBA92000CB45C /* RNCryptor-Prefix.pch */,
+				4AE1C92D193BBA92000CB45C /* RNCryptor.h */,
+				4AE1C92E193BBA92000CB45C /* RNCryptor.m */,
+				4AE1C92F193BBA92000CB45C /* RNCryptorEngine.h */,
+				4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */,
+				4AE1C931193BBA92000CB45C /* RNDecryptor.h */,
+				4AE1C932193BBA92000CB45C /* RNDecryptor.m */,
+				4AE1C933193BBA92000CB45C /* RNEncryptor.h */,
+				4AE1C934193BBA92000CB45C /* RNEncryptor.m */,
+			);
+			path = RNCryptor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A1B60981930122400B5A653 /* SCRUMWare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A1B60CB1930122500B5A653 /* Build configuration list for PBXNativeTarget "SCRUMWare" */;
+			buildPhases = (
+				4A1B60951930122400B5A653 /* Sources */,
+				4A1B60961930122400B5A653 /* Frameworks */,
+				4A1B60971930122400B5A653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCRUMWare;
+			productName = SCRUMWare;
+			productReference = 4A1B60991930122400B5A653 /* SCRUMWare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A1B60B81930122500B5A653 /* SCRUMWareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A1B60CE1930122500B5A653 /* Build configuration list for PBXNativeTarget "SCRUMWareTests" */;
+			buildPhases = (
+				4A1B60B51930122500B5A653 /* Sources */,
+				4A1B60B61930122500B5A653 /* Frameworks */,
+				4A1B60B71930122500B5A653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A1B60C01930122500B5A653 /* PBXTargetDependency */,
+			);
+			name = SCRUMWareTests;
+			productName = SCRUMWareTests;
+			productReference = 4A1B60B91930122500B5A653 /* SCRUMWareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A1B60911930122400B5A653 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SCW;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = scrumware;
+				TargetAttributes = {
+					4A1B60B81930122500B5A653 = {
+						TestTargetID = 4A1B60981930122400B5A653;
+					};
+				};
+			};
+			buildConfigurationList = 4A1B60941930122400B5A653 /* Build configuration list for PBXProject "SCRUMWare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4A1B60901930122400B5A653;
+			productRefGroup = 4A1B609A1930122400B5A653 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A1B60981930122400B5A653 /* SCRUMWare */,
+				4A1B60B81930122500B5A653 /* SCRUMWareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A1B60971930122400B5A653 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE1C93F193BF879000CB45C /* SCWMainMenuViewController.xib in Resources */,
+				4A1B60D8193012A100B5A653 /* SCWLoginViewController.xib in Resources */,
+				4A1B60A91930122400B5A653 /* InfoPlist.strings in Resources */,
+				4A9FC01D196271F300F9FA3C /* SCWTaskTableViewCell.xib in Resources */,
+				4A1B60B41930122400B5A653 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A1B60B71930122500B5A653 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1B60C61930122500B5A653 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A1B60951930122400B5A653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A9FC00A196258F800F9FA3C /* AFHTTPRequestOperation.m in Sources */,
+				4A82A549193D56D4005DF7C7 /* SCWUser.m in Sources */,
+				4AE1C936193BBA92000CB45C /* RNCryptorEngine.m in Sources */,
+				4A1B60D7193012A100B5A653 /* SCWLoginViewController.m in Sources */,
+				4AE1C93E193BF879000CB45C /* SCWMainMenuViewController.m in Sources */,
+				4A9FC012196258F800F9FA3C /* AFURLSessionManager.m in Sources */,
+				4A9FC01C196271F300F9FA3C /* SCWTaskTableViewCell.m in Sources */,
+				4A9FC00C196258F800F9FA3C /* AFHTTPSessionManager.m in Sources */,
+				4A9FC0151962598A00F9FA3C /* SCWTasksViewController.m in Sources */,
+				4A1B60B21930122400B5A653 /* SCRUMWare.xcdatamodeld in Sources */,
+				4A9FC00D196258F800F9FA3C /* AFNetworkReachabilityManager.m in Sources */,
+				4A1B60AF1930122400B5A653 /* SCWAppDelegate.m in Sources */,
+				4A9FC011196258F800F9FA3C /* AFURLResponseSerialization.m in Sources */,
+				4A9FC0181962681800F9FA3C /* SCWTask.m in Sources */,
+				4A9FC010196258F800F9FA3C /* AFURLRequestSerialization.m in Sources */,
+				4A9FC00F196258F800F9FA3C /* AFURLConnectionOperation.m in Sources */,
+				4A9FC00B196258F800F9FA3C /* AFHTTPRequestOperationManager.m in Sources */,
+				4AE1C937193BBA92000CB45C /* RNDecryptor.m in Sources */,
+				4A1B60AB1930122400B5A653 /* main.m in Sources */,
+				4A9FC00E196258F800F9FA3C /* AFSecurityPolicy.m in Sources */,
+				4AE1C938193BBA92000CB45C /* RNEncryptor.m in Sources */,
+				4A1B60DB193012CA00B5A653 /* SCWUserLogin.m in Sources */,
+				4AE1C935193BBA92000CB45C /* RNCryptor.m in Sources */,
+				4A375FEC19636BB70087EFEB /* SCWStatus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A1B60B51930122500B5A653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0F5DFB193B8DFB00D9E7EF /* SCWUserLoginTests.m in Sources */,
+				4A1B60C81930122500B5A653 /* SCRUMWareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A1B60C01930122500B5A653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A1B60981930122400B5A653 /* SCRUMWare */;
+			targetProxy = 4A1B60BF1930122500B5A653 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A1B60A71930122400B5A653 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A1B60A81930122400B5A653 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4A1B60C41930122500B5A653 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A1B60C51930122500B5A653 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A1B60C91930122500B5A653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4A1B60CA1930122500B5A653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A1B60CC1930122500B5A653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCRUMWare/SCRUMWare-Prefix.pch";
+				INFOPLIST_FILE = "SCRUMWare/SCRUMWare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4A1B60CD1930122500B5A653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCRUMWare/SCRUMWare-Prefix.pch";
+				INFOPLIST_FILE = "SCRUMWare/SCRUMWare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4A1B60CF1930122500B5A653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCRUMWare.app/SCRUMWare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCRUMWare/SCRUMWare-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SCRUMWareTests/SCRUMWareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4A1B60D01930122500B5A653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCRUMWare.app/SCRUMWare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCRUMWare/SCRUMWare-Prefix.pch";
+				INFOPLIST_FILE = "SCRUMWareTests/SCRUMWareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A1B60941930122400B5A653 /* Build configuration list for PBXProject "SCRUMWare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1B60C91930122500B5A653 /* Debug */,
+				4A1B60CA1930122500B5A653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A1B60CB1930122500B5A653 /* Build configuration list for PBXNativeTarget "SCRUMWare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1B60CC1930122500B5A653 /* Debug */,
+				4A1B60CD1930122500B5A653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A1B60CE1930122500B5A653 /* Build configuration list for PBXNativeTarget "SCRUMWareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1B60CF1930122500B5A653 /* Debug */,
+				4A1B60D01930122500B5A653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4A1B60B01930122400B5A653 /* SCRUMWare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4A1B60B11930122400B5A653 /* SCRUMWare.xcdatamodel */,
+			);
+			currentVersion = 4A1B60B11930122400B5A653 /* SCRUMWare.xcdatamodel */;
+			path = SCRUMWare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4A1B60911930122400B5A653 /* Project object */;
+}
