@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, SCWMainMenuOption) {
 
 // Constants
 NSInteger const SCWTableViewCellCount = 3;
-NSString *const SCWTableViewCellIdentifier = @"MainMenuCell";
+NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
 
 // Private Interface
 @interface SCWMainMenuViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -55,6 +55,11 @@ NSString *const SCWTableViewCellIdentifier = @"MainMenuCell";
     self.tableView.dataSource = self;
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     // Present the login screen if user isn't logged in.
 //    if (!_userLogin.isLoggedIn) {
@@ -80,8 +85,21 @@ NSString *const SCWTableViewCellIdentifier = @"MainMenuCell";
     return 50;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    view.tintColor = [UIColor grayColor];
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor whiteColor]];
+    view.alpha = 0.9;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SCWTableViewCellIdentifier];
+    UITableViewCell *cell = (UITableViewCell *)[_tableView dequeueReusableCellWithIdentifier:SCWMenuTableViewCellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SCWMenuTableViewCellIdentifier];
+    }
+    
+
     
     switch (indexPath.row) {
         case SCWMainMenuOptionTasks:

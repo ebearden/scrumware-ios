@@ -16,7 +16,7 @@
         _taskId = [dictionary[@"task_id"] intValue];
         _assignedTo = [dictionary[@"assigned_to"] intValue];
         _statusId = [dictionary[@"status_id"] intValue];
-        _name = [NSString stringWithFormat:@"%@", dictionary[@"name"]];
+        _name = [NSString stringWithFormat:@"%@", dictionary[@"task_name"]];
         _description = [NSString stringWithFormat:@"%@", dictionary[@"description"]];
         _workNotes = [NSString stringWithFormat:@"%@", dictionary[@"work_notes"]];
     }

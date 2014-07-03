@@ -8,6 +8,7 @@
 
 #import "SCWTasksViewController.h"
 #import "SCWTaskTableViewCell.h"
+#import "SCWTaskViewController.h"
 #import "AFNetworking.h"
 #import "SCWTask.h"
 #import "SCWStatus.h"
@@ -22,16 +23,16 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSDictionary *responseObject;
 @property (nonatomic, retain) NSDictionary *taskDictionary;
+@property (nonatomic) BOOL loadingTasks;
 
 @end
 
 @implementation SCWTasksViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        _loadingTasks = YES;
     }
     return self;
 }
@@ -46,11 +47,15 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
     self.tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
-    [self retrieveTasks];
-    
-    
+    [self retrieveTasks]; 
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+// TODO: Use current userId.
 - (void)retrieveTasks {
     NSString *urlString = [NSString stringWithFormat:@"%@?user_id=3&data_type=json", SCWTasksBaseUrl];
     NSURL *url = [NSURL URLWithString:urlString];
@@ -74,13 +79,11 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
         }
 
         self.taskDictionary = @{SCWActiveTaskKey: activeArray, SCWCompletedTaskKey:completedArray};
-        [self.tableView reloadData];
-        
-        
+        [self tasksSuccessfullyLoaded];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:[NSString stringWithFormat:@"%@", error]
+                                                            message:@"Error retrieving tasks."
                                                            delegate:self
                                                   cancelButtonTitle:@"Okay"
                                                   otherButtonTitles:nil];
@@ -94,9 +97,9 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return [[_taskDictionary objectForKey:SCWActiveTaskKey] count];
+            return _loadingTasks ? 1 : [[_taskDictionary objectForKey:SCWActiveTaskKey] count];
         case 1:
-            return [[_taskDictionary objectForKey:SCWCompletedTaskKey] count];
+            return _loadingTasks ? 1 : [[_taskDictionary objectForKey:SCWCompletedTaskKey] count];
         default:
             return 0;
     }
@@ -124,10 +127,11 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
     if (cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SCWTaskTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
 
     NSArray *taskArray;
+    
     switch (indexPath.section) {
         case 0:
             taskArray = _taskDictionary[SCWActiveTaskKey];
@@ -146,8 +150,33 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
     cell.statusLabel.text = [SCWStatus statusStringForStatusId:[taskArray[indexPath.row] statusId]];
     cell.taskIdLabel.text = [NSString stringWithFormat:@"%d", [taskArray[indexPath.row] taskId]];
     cell.statusColorLabel.backgroundColor = [self colorForStatus:[taskArray[indexPath.row] statusId]];
-    cell.statusColorLabel.alpha = 0.5;
+    cell.statusColorLabel.alpha = 0.3;
+    
+    if (_loadingTasks) {
+        [cell addSubview:[self overlayForCell:cell]];
+    }
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SCWTaskViewController *controller = [[SCWTaskViewController alloc] initWithNibName:@"SCWTaskViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    switch (indexPath.section) {
+        case 0:
+            controller.task = _taskDictionary[SCWActiveTaskKey][indexPath.row];
+            break;
+        case 1:
+            controller.task = _taskDictionary[SCWCompletedTaskKey][indexPath.row];
+            break;
+        default:
+            break;
+    }
+    
+    controller.modalPresentationStyle = UIModalPresentationPageSheet;
+
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -155,18 +184,37 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    view.tintColor = [UIColor grayColor];
+    view.tintColor = [UIColor darkGrayColor];
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
-    [header.textLabel setTextColor:[UIColor blackColor]];
-    view.alpha = 0.9;
+    [header.textLabel setTextColor:[UIColor whiteColor]];
+}
+
+#pragma mark - Private Methods
+
+- (UIView *)overlayForCell:(UITableViewCell *)cell {
+    UIView *overlay = [[UIView alloc] init];
+    overlay.frame = cell.frame;
+    overlay.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.center = cell.center;
+    [activityIndicator startAnimating];
+    
+    [overlay addSubview:activityIndicator];
+    return overlay;
+}
+
+- (void)tasksSuccessfullyLoaded {
+    _loadingTasks = NO;
+    [self.tableView reloadData];
 }
 
 - (UIColor *)colorForStatus:(SCWStatusType)status {
     switch (status) {
         case SCWStatusTypeTodo:
-            return [UIColor lightGrayColor];
+            return [UIColor blackColor];
         case SCWStatusTypeInProcess:
-            return [UIColor darkGrayColor];
+            return [UIColor greenColor];
         case SCWStatusTypeToVerify:
         case SCWStatusTypeDone:
         default:
@@ -174,10 +222,8 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

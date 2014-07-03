@@ -28,6 +28,8 @@
 		4A1B60DB193012CA00B5A653 /* SCWUserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B60DA193012CA00B5A653 /* SCWUserLogin.m */; };
 		4A375FEC19636BB70087EFEB /* SCWStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A375FEB19636BB70087EFEB /* SCWStatus.m */; };
 		4A82A549193D56D4005DF7C7 /* SCWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A82A548193D56D4005DF7C7 /* SCWUser.m */; };
+		4A9A84C11964946100C8E879 /* SCWTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A84BF1964946100C8E879 /* SCWTaskViewController.m */; };
+		4A9A84C21964946100C8E879 /* SCWTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A84C01964946100C8E879 /* SCWTaskViewController.xib */; };
 		4A9FC00A196258F800F9FA3C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFF8196258F800F9FA3C /* AFHTTPRequestOperation.m */; };
 		4A9FC00B196258F800F9FA3C /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFFA196258F800F9FA3C /* AFHTTPRequestOperationManager.m */; };
 		4A9FC00C196258F800F9FA3C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FBFFC196258F800F9FA3C /* AFHTTPSessionManager.m */; };
@@ -89,6 +91,9 @@
 		4A375FEB19636BB70087EFEB /* SCWStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWStatus.m; sourceTree = "<group>"; };
 		4A82A547193D56D4005DF7C7 /* SCWUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWUser.h; sourceTree = "<group>"; };
 		4A82A548193D56D4005DF7C7 /* SCWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWUser.m; sourceTree = "<group>"; };
+		4A9A84BE1964946100C8E879 /* SCWTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWTaskViewController.h; sourceTree = "<group>"; };
+		4A9A84BF1964946100C8E879 /* SCWTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWTaskViewController.m; sourceTree = "<group>"; };
+		4A9A84C01964946100C8E879 /* SCWTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCWTaskViewController.xib; sourceTree = "<group>"; };
 		4A9FBFF7196258F800F9FA3C /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		4A9FBFF8196258F800F9FA3C /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		4A9FBFF9196258F800F9FA3C /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -245,6 +250,9 @@
 				4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */,
 				4A9FC0131962598A00F9FA3C /* SCWTasksViewController.h */,
 				4A9FC0141962598A00F9FA3C /* SCWTasksViewController.m */,
+				4A9A84BE1964946100C8E879 /* SCWTaskViewController.h */,
+				4A9A84BF1964946100C8E879 /* SCWTaskViewController.m */,
+				4A9A84C01964946100C8E879 /* SCWTaskViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -415,6 +423,7 @@
 				4AE1C93F193BF879000CB45C /* SCWMainMenuViewController.xib in Resources */,
 				4A1B60D8193012A100B5A653 /* SCWLoginViewController.xib in Resources */,
 				4A1B60A91930122400B5A653 /* InfoPlist.strings in Resources */,
+				4A9A84C21964946100C8E879 /* SCWTaskViewController.xib in Resources */,
 				4A9FC01D196271F300F9FA3C /* SCWTaskTableViewCell.xib in Resources */,
 				4A1B60B41930122400B5A653 /* Images.xcassets in Resources */,
 			);
@@ -439,6 +448,7 @@
 				4A82A549193D56D4005DF7C7 /* SCWUser.m in Sources */,
 				4AE1C936193BBA92000CB45C /* RNCryptorEngine.m in Sources */,
 				4A1B60D7193012A100B5A653 /* SCWLoginViewController.m in Sources */,
+				4A9A84C11964946100C8E879 /* SCWTaskViewController.m in Sources */,
 				4AE1C93E193BF879000CB45C /* SCWMainMenuViewController.m in Sources */,
 				4A9FC012196258F800F9FA3C /* AFURLSessionManager.m in Sources */,
 				4A9FC01C196271F300F9FA3C /* SCWTaskTableViewCell.m in Sources */,
