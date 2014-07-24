@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class SCWUser;
 @protocol SCWUserLoginDelegate <NSObject>
 
 - (void)loginSuccessful;
@@ -19,10 +20,7 @@
 
 @property (nonatomic) id <SCWUserLoginDelegate> delegate;
 @property (nonatomic) BOOL saveInformation;
-
-// Only need to expose the username, the password can stay internal.
-@property (nonatomic, readonly) NSString *username;
-@property (nonatomic) BOOL isLoggedIn;
+@property (nonatomic, retain) SCWUser *user;
 
 - (instancetype)init;
 - (void)loginWithUsername:(NSString *)username andPassword:(NSString *)password;

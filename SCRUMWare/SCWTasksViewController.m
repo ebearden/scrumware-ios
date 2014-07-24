@@ -12,11 +12,13 @@
 #import "AFNetworking.h"
 #import "SCWTask.h"
 #import "SCWStatus.h"
+#import "SCWUser.h"
+#import "SCWAppDelegate.h"
 
 NSString *const SCWActiveTaskKey = @"active";
 NSString *const SCWCompletedTaskKey = @"completed";
 NSString *const SCWTasksCellIdentifier = @"SCWTasksCellID";
-NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
+NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
 
 @interface SCWTasksViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -24,6 +26,7 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 @property (nonatomic, retain) NSDictionary *responseObject;
 @property (nonatomic, retain) NSDictionary *taskDictionary;
 @property (nonatomic) BOOL loadingTasks;
+@property (nonatomic, retain) SCWUser *user;
 
 @end
 
@@ -33,6 +36,7 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _loadingTasks = YES;
+        _user = [[SCWUser alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"SCWUser"]];
     }
     return self;
 }
@@ -57,7 +61,7 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/tasks";
 
 // TODO: Use current userId.
 - (void)retrieveTasks {
-    NSString *urlString = [NSString stringWithFormat:@"%@?user_id=3&data_type=json", SCWTasksBaseUrl];
+    NSString *urlString = [NSString stringWithFormat:@"%@?user_id=%d&data_type=json&key=%@", SCWTasksBaseUrl, _user.userId, LOGIN_KEY];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     

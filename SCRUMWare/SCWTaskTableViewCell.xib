@@ -13,11 +13,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xh-Jj-Fex" userLabel="Status Color Label">
-                        <rect key="frame" x="0.0" y="-1" width="16" height="81"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-j2-WJZ">
                         <rect key="frame" x="15" y="0.0" width="305" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,7 +61,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionTextView" destination="y5d-dQ-RQq" id="SrF-Xy-vJa"/>
-                <outlet property="statusColorLabel" destination="4xh-Jj-Fex" id="OTH-wb-eb7"/>
                 <outlet property="statusLabel" destination="dNm-yf-vg7" id="xm2-sh-zmA"/>
                 <outlet property="taskIdLabel" destination="Ccn-3G-trD" id="feG-kR-NdM"/>
                 <outlet property="taskNameLabel" destination="P3C-hI-Xhc" id="7wr-cI-HhV"/>

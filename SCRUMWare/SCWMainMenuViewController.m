@@ -29,7 +29,6 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) SCWUserLogin *userLogin;
-@property (strong, nonatomic) SCWUser *user;
 
 @end
 
@@ -40,10 +39,6 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _userLogin = [[SCWUserLogin alloc] init];
-        _user = [[SCWUser alloc] init];
-        _user.firstName = @"Test";
-        _user.lastName = @"User";
-        
     }
     return self;
 }
@@ -62,9 +57,12 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
 
 - (void)viewDidAppear:(BOOL)animated {
     // Present the login screen if user isn't logged in.
-//    if (!_userLogin.isLoggedIn) {
-//        [self showLoginScreen];
-//    }
+    if (!_userLogin.user.isLoggedIn) {
+        [self showLoginScreen];
+    } else {
+        [self.tableView reloadData];
+    }
+    
 }
 
 #pragma mark - TableView Methods
@@ -74,7 +72,7 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName];
+    return [NSString stringWithFormat:@"%@ %@", _userLogin.user.firstName, _userLogin.user.lastName];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -138,6 +136,7 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
 
 - (void)showLoginScreen {
     SCWLoginViewController *loginController = [[SCWLoginViewController alloc] initWithNibName:@"SCWLoginViewController" bundle:nil];
+    loginController.userLogin = _userLogin;
     loginController.modalPresentationStyle = UIModalPresentationPageSheet;
     loginController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self.navigationController presentViewController:loginController animated:YES completion:nil];

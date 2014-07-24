@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCWUserLogin.h"
 
-@interface SCWLoginViewController : UIViewController
+@interface SCWLoginViewController : UIViewController <UITextFieldDelegate, SCWUserLoginDelegate>
+
+@property (strong, nonatomic) SCWUserLogin *userLogin;
 
 @end

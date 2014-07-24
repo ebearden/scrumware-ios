@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SCWMainMenuViewController.h"
 
+// Key used to login bypass sessions.
+#define LOGIN_KEY @"DbfLIicCZNJkTldSBQzPVKEF74hnMsrHu"
+
 @interface SCWAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
