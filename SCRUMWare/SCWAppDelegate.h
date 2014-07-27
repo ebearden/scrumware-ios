@@ -10,7 +10,11 @@
 #import "SCWMainMenuViewController.h"
 
 // Key used to login bypass sessions.
-#define LOGIN_KEY @"DbfLIicCZNJkTldSBQzPVKEF74hnMsrHu"
+extern NSString *const SCWLoginKey;
+
+// Keys for NSUserDefaults
+extern NSString *const SCWStayLoggedInKey;
+extern NSString *const SCWUserKey;
 
 @interface SCWAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,7 +23,7 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) SCWMainMenuViewController *mainMenuViewController;
 
-// Core Data
+// Core Data - Not Setup.
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

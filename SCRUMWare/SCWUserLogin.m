@@ -8,9 +8,9 @@
 // TODO: Create a user object on success.
 
 #import "SCWUserLogin.h"
-#import "RNCryptor/RNEncryptor.h"
 #import "AFNetworking.h"
 #import "SCWUser.h"
+#import "SCWAppDelegate.h"
 
 NSString *const SCWLoginBaseUrl = @"http://localhost:8080/SCRUMware/Login";
 
@@ -27,7 +27,7 @@ NSString *const SCWLoginBaseUrl = @"http://localhost:8080/SCRUMware/Login";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSDictionary *userDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:@"SCWUser"];
+        NSDictionary *userDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:SCWUserKey];
         if (userDictionary) {
             _user = [[SCWUser alloc] initWithDictionary:userDictionary];
         }
@@ -77,21 +77,9 @@ NSString *const SCWLoginBaseUrl = @"http://localhost:8080/SCRUMware/Login";
 }
 
 - (void)logout {
-    //TODO: ....
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:SCWStayLoggedInKey];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:SCWUserKey];
 }
-
-//- (NSString *)encryptString:(NSString *)input {
-//    NSData *data = [input dataUsingEncoding:NSUTF8StringEncoding];
-//    NSError *error;
-//    
-//    NSData *encryptedData = [RNEncryptor encryptData:data withSettings:kRNCryptorAES256Settings password:SCWLoginKey error:&error];
-//    NSString *encryptedString = [[NSString alloc] initWithData:encryptedData encoding:NSUTF8StringEncoding];
-//    NSLog(@"Encrypted String - %@", encryptedString);
-//    //TODO: Return data instead of string?
-//    //Then send the data object throught the request?
-//
-//    return encryptedString;
-//}
 
 
 @end

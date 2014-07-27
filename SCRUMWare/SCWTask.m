@@ -19,9 +19,18 @@
         _name = [NSString stringWithFormat:@"%@", dictionary[@"task_name"]];
         _description = [NSString stringWithFormat:@"%@", dictionary[@"description"]];
         _workNotes = [NSString stringWithFormat:@"%@", dictionary[@"work_notes"]];
+        _dependsOn = [self dependencyArray:dictionary[@"depends_on"]];
     }
     
     return self;
+}
+
+- (NSArray *)dependencyArray:(NSDictionary *)dictionary {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSDictionary *dependency in dictionary) {
+        [array addObject:dependency[@"task_name"]];
+    }
+    return array;
 }
 
 @end

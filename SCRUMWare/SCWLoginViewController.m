@@ -10,6 +10,7 @@
 #import "SCWLoginViewController.h"
 #import "SCWUserLogin.h"
 #import "SCWUser.h"
+#import "SCWAppDelegate.h"
 
 @interface SCWLoginViewController ()
 
@@ -81,8 +82,8 @@
 - (void)writeToUserDefaults {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    [userDefaults setObject:_userLogin.user.dictionary forKey:@"SCWUser"];
-    [userDefaults setBool:self.stayLoggedInSwitch.on forKey:@"StayLoggedIn"];
+    [userDefaults setObject:_userLogin.user.dictionary forKey:SCWUserKey];
+    [userDefaults setBool:self.stayLoggedInSwitch.on forKey:SCWStayLoggedInKey];
     [userDefaults synchronize];
 
 }

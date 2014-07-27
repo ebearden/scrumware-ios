@@ -43,10 +43,6 @@
 		4A9FC0181962681800F9FA3C /* SCWTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC0171962681800F9FA3C /* SCWTask.m */; };
 		4A9FC01C196271F300F9FA3C /* SCWTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FC01A196271F300F9FA3C /* SCWTaskTableViewCell.m */; };
 		4A9FC01D196271F300F9FA3C /* SCWTaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */; };
-		4AE1C935193BBA92000CB45C /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C92E193BBA92000CB45C /* RNCryptor.m */; };
-		4AE1C936193BBA92000CB45C /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */; };
-		4AE1C937193BBA92000CB45C /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C932193BBA92000CB45C /* RNDecryptor.m */; };
-		4AE1C938193BBA92000CB45C /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C934193BBA92000CB45C /* RNEncryptor.m */; };
 		4AE1C93A193BBAA6000CB45C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE1C939193BBAA6000CB45C /* Security.framework */; };
 		4AE1C93E193BF879000CB45C /* SCWMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */; };
 		4AE1C93F193BF879000CB45C /* SCWMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1C93D193BF879000CB45C /* SCWMainMenuViewController.xib */; };
@@ -120,16 +116,6 @@
 		4A9FC019196271F300F9FA3C /* SCWTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWTaskTableViewCell.h; sourceTree = "<group>"; };
 		4A9FC01A196271F300F9FA3C /* SCWTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWTaskTableViewCell.m; sourceTree = "<group>"; };
 		4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCWTaskTableViewCell.xib; sourceTree = "<group>"; };
-		4AE1C92B193BBA92000CB45C /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
-		4AE1C92C193BBA92000CB45C /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
-		4AE1C92D193BBA92000CB45C /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
-		4AE1C92E193BBA92000CB45C /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
-		4AE1C92F193BBA92000CB45C /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
-		4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
-		4AE1C931193BBA92000CB45C /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
-		4AE1C932193BBA92000CB45C /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
-		4AE1C933193BBA92000CB45C /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
-		4AE1C934193BBA92000CB45C /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
 		4AE1C939193BBAA6000CB45C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4AE1C93B193BF879000CB45C /* SCWMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWMainMenuViewController.h; sourceTree = "<group>"; };
 		4AE1C93C193BF879000CB45C /* SCWMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWMainMenuViewController.m; sourceTree = "<group>"; };
@@ -252,7 +238,6 @@
 				4A9FC0141962598A00F9FA3C /* SCWTasksViewController.m */,
 				4A9A84BE1964946100C8E879 /* SCWTaskViewController.h */,
 				4A9A84BF1964946100C8E879 /* SCWTaskViewController.m */,
-				4A9A84C01964946100C8E879 /* SCWTaskViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -311,6 +296,7 @@
 		4A9FC01E1962722400F9FA3C /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				4A9A84C01964946100C8E879 /* SCWTaskViewController.xib */,
 				4A1B60D6193012A100B5A653 /* SCWLoginViewController.xib */,
 				4AE1C93D193BF879000CB45C /* SCWMainMenuViewController.xib */,
 				4A9FC01B196271F300F9FA3C /* SCWTaskTableViewCell.xib */,
@@ -322,26 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				4A9FBFF6196258F800F9FA3C /* AFNetworking */,
-				4AE1C92A193BBA92000CB45C /* RNCryptor */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		4AE1C92A193BBA92000CB45C /* RNCryptor */ = {
-			isa = PBXGroup;
-			children = (
-				4AE1C92B193BBA92000CB45C /* RNCryptor+Private.h */,
-				4AE1C92C193BBA92000CB45C /* RNCryptor-Prefix.pch */,
-				4AE1C92D193BBA92000CB45C /* RNCryptor.h */,
-				4AE1C92E193BBA92000CB45C /* RNCryptor.m */,
-				4AE1C92F193BBA92000CB45C /* RNCryptorEngine.h */,
-				4AE1C930193BBA92000CB45C /* RNCryptorEngine.m */,
-				4AE1C931193BBA92000CB45C /* RNDecryptor.h */,
-				4AE1C932193BBA92000CB45C /* RNDecryptor.m */,
-				4AE1C933193BBA92000CB45C /* RNEncryptor.h */,
-				4AE1C934193BBA92000CB45C /* RNEncryptor.m */,
-			);
-			path = RNCryptor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +414,6 @@
 			files = (
 				4A9FC00A196258F800F9FA3C /* AFHTTPRequestOperation.m in Sources */,
 				4A82A549193D56D4005DF7C7 /* SCWUser.m in Sources */,
-				4AE1C936193BBA92000CB45C /* RNCryptorEngine.m in Sources */,
 				4A1B60D7193012A100B5A653 /* SCWLoginViewController.m in Sources */,
 				4A9A84C11964946100C8E879 /* SCWTaskViewController.m in Sources */,
 				4AE1C93E193BF879000CB45C /* SCWMainMenuViewController.m in Sources */,
@@ -462,12 +429,9 @@
 				4A9FC010196258F800F9FA3C /* AFURLRequestSerialization.m in Sources */,
 				4A9FC00F196258F800F9FA3C /* AFURLConnectionOperation.m in Sources */,
 				4A9FC00B196258F800F9FA3C /* AFHTTPRequestOperationManager.m in Sources */,
-				4AE1C937193BBA92000CB45C /* RNDecryptor.m in Sources */,
 				4A1B60AB1930122400B5A653 /* main.m in Sources */,
 				4A9FC00E196258F800F9FA3C /* AFSecurityPolicy.m in Sources */,
-				4AE1C938193BBA92000CB45C /* RNEncryptor.m in Sources */,
 				4A1B60DB193012CA00B5A653 /* SCWUserLogin.m in Sources */,
-				4AE1C935193BBA92000CB45C /* RNCryptor.m in Sources */,
 				4A375FEC19636BB70087EFEB /* SCWStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

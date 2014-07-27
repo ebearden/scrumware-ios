@@ -36,7 +36,7 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _loadingTasks = YES;
-        _user = [[SCWUser alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"SCWUser"]];
+        _user = [[SCWUser alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:SCWUserKey]];
     }
     return self;
 }
@@ -50,8 +50,10 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:_tableView];
-    
-    [self retrieveTasks]; 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self retrieveTasks];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -61,7 +63,7 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
 
 // TODO: Use current userId.
 - (void)retrieveTasks {
-    NSString *urlString = [NSString stringWithFormat:@"%@?user_id=%d&data_type=json&key=%@", SCWTasksBaseUrl, _user.userId, LOGIN_KEY];
+    NSString *urlString = [NSString stringWithFormat:@"%@?user_id=%d&data_type=json&key=%@", SCWTasksBaseUrl, _user.userId, SCWLoginKey];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     

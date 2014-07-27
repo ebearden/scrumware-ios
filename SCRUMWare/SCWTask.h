@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *description;
 @property (nonatomic, retain) NSString *workNotes;
+@property (nonatomic, retain) NSArray *dependsOn;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

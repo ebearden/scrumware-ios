@@ -14,6 +14,10 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+NSString *const SCWLoginKey = @"DbfLIicCZNJkTldSBQzPVKEF74hnMsrHu";
+NSString *const SCWStayLoggedInKey = @"SCWStayLoggedIn";
+NSString *const SCWUserKey = @"SCWUser";
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -33,9 +37,9 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    BOOL stayLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"StayLoggedIn"];
+    BOOL stayLoggedIn = [[NSUserDefaults standardUserDefaults] boolForKey:SCWStayLoggedInKey];
     if (!stayLoggedIn) {
-        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"SCWUser"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:SCWUserKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }

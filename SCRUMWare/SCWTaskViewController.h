@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class SCWTask;
 
-@interface SCWTaskViewController : UIViewController
+@interface SCWTaskViewController : UIViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) SCWTask *task;
 
