@@ -18,8 +18,8 @@
 
 @interface SCWUserLogin : NSObject
 
-@property (nonatomic) id <SCWUserLoginDelegate> delegate;
 @property (nonatomic) BOOL saveInformation;
+@property (nonatomic) id <SCWUserLoginDelegate> delegate;
 @property (nonatomic, retain) SCWUser *user;
 
 - (instancetype)init;

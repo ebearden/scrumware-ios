@@ -10,13 +10,13 @@
 
 @interface SCWTask : NSObject
 
-@property (nonatomic) NSInteger taskId;
 @property (nonatomic) NSInteger assignedTo;
 @property (nonatomic) NSInteger statusId;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *description;
-@property (nonatomic, retain) NSString *workNotes;
+@property (nonatomic) NSInteger taskId;
 @property (nonatomic, retain) NSArray *dependsOn;
+@property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *workNotes;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

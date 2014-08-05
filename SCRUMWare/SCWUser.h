@@ -10,14 +10,13 @@
 
 @interface SCWUser : NSObject
 
-@property (nonatomic) NSInteger userId;
 
-@property (nonatomic, retain) NSString *username;
+@property (nonatomic) BOOL isLoggedIn;
+@property (nonatomic) NSInteger userId;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
 @property (nonatomic, retain) NSString *role;
-
-@property (nonatomic) BOOL isLoggedIn;
+@property (nonatomic, retain) NSString *username;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)dictionary;

@@ -22,11 +22,11 @@ NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
 
 @interface SCWTasksViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic) BOOL loadingTasks;
 @property (nonatomic, retain) NSDictionary *responseObject;
 @property (nonatomic, retain) NSDictionary *taskDictionary;
-@property (nonatomic) BOOL loadingTasks;
 @property (nonatomic, retain) SCWUser *user;
+@property (nonatomic, retain) UITableView *tableView;
 
 @end
 

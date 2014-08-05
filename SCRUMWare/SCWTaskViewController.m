@@ -16,9 +16,9 @@ NSString *const SCWDependencyCellIdentifier = @"DependencyCell";
 
 @interface SCWTaskViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UIButton *statusButton;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 - (IBAction)didPressStatusButton:(id)sender;
 

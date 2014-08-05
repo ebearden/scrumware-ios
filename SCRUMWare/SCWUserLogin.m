@@ -7,10 +7,10 @@
 //
 // TODO: Create a user object on success.
 
-#import "SCWUserLogin.h"
 #import "AFNetworking.h"
-#import "SCWUser.h"
 #import "SCWAppDelegate.h"
+#import "SCWUser.h"
+#import "SCWUserLogin.h"
 
 NSString *const SCWLoginBaseUrl = @"http://localhost:8080/SCRUMware/Login";
 

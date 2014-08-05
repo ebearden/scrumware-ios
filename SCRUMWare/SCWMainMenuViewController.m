@@ -15,7 +15,6 @@
 // Main Menu Options
 typedef NS_ENUM(NSUInteger, SCWMainMenuOption) {
     SCWMainMenuOptionTasks,
-    SCWMainMenuOptionStories,
     SCWMainMenuOptionLogout
 };
 
@@ -104,10 +103,7 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
             cell.textLabel.text = @"Tasks";
             cell.detailTextLabel.text = @"View your current task assignments.";
             break;
-        case SCWMainMenuOptionStories:
-            cell.textLabel.text = @"Stories";
-            cell.detailTextLabel.text = @"View your current stories.";
-            break;
+        
         case SCWMainMenuOptionLogout:
             cell.textLabel.text = @"Logout";
             break;
@@ -121,13 +117,13 @@ NSString *const SCWMenuTableViewCellIdentifier = @"MainMenuCell";
             SCWTasksViewController *controller = [[SCWTasksViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
-            break;
-        case SCWMainMenuOptionStories:
-            break;
-        case SCWMainMenuOptionLogout:
+        break;
+        
+        case SCWMainMenuOptionLogout: {
             [_userLogin logout];
             [self showLoginScreen];
-            break;
+        }
+        break;
 
     }
 }
