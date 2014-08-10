@@ -18,7 +18,7 @@
 NSString *const SCWActiveTaskKey = @"active";
 NSString *const SCWCompletedTaskKey = @"completed";
 NSString *const SCWTasksCellIdentifier = @"SCWTasksCellID";
-NSString *const SCWTasksBaseUrl = @"http://localhost:8080/SCRUMware/task/tasks";
+NSString *const SCWTasksBaseUrl = @"http://ec2-54-213-43-131.us-west-2.compute.amazonaws.com:8080/SCRUMware/task/tasks";
 
 @interface SCWTasksViewController () <UITableViewDataSource, UITableViewDelegate>
 

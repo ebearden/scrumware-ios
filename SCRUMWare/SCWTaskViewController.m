@@ -105,7 +105,7 @@ NSString *const SCWDependencyCellIdentifier = @"DependencyCell";
 
 - (void)saveTask:(SCWTask *)task {
     _task.description = _descriptionTextView.text;
-    NSString *urlString = [NSString stringWithFormat:@"http://localhost:8080/SCRUMware/task/edit"];
+    NSString *urlString = [NSString stringWithFormat:@"http://ec2-54-213-43-131.us-west-2.compute.amazonaws.com:8080/SCRUMware/task/edit"];
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"user_id": @(_task.assignedTo),

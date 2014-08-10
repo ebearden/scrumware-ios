@@ -12,7 +12,7 @@
 #import "SCWUser.h"
 #import "SCWUserLogin.h"
 
-NSString *const SCWLoginBaseUrl = @"http://localhost:8080/SCRUMware/Login";
+NSString *const SCWLoginBaseUrl = @"http://ec2-54-213-43-131.us-west-2.compute.amazonaws.com:8080/SCRUMware/Login";
 
 @interface SCWUserLogin ()
 
